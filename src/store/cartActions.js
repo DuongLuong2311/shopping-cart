@@ -5,12 +5,12 @@ import { uiActions } from "./uiSlice";
 export const fetchData = () => {
   return async dispatch => {
     const fetchHandler = async () => {
-      const res = fetch('https://redux-tutorial-6c8fe-default-rtdb.asia-southeast1.firebasedatabase.app/cartItems.json')
-      const data = await res.json()
+      const res = fetch('http://localhost:5000/products')
+      const data = await res.data
       return data
     }
     try {
-      const cartData = await fetchData();
+      const cartData = await fetchHandler();
       dispatch(cartActions.replaceData(cartData))
     }catch (err) {
       dispatch(uiActions.showNotifications({
@@ -31,8 +31,8 @@ export const sendRequestCartData = (cart) => {
     })
     )
     const sendRequest = async () => {
-      const res = await fetch('https://redux-tutorial-6c8fe-default-rtdb.asia-southeast1.firebasedatabase.app/cartItems.json', {
-        method: 'PUT',
+      const res = await fetch('http://localhost:5000/products', {
+        method: 'GET',
         body: JSON.stringify(cart)
       })
       const data = await res.json()
