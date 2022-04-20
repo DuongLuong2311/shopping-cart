@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+}
+
+  ul {
+  list-style-type: none;
+  }
+  li {
+    padding: 10px;
+  }
+
+
+
+//Auth
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rebeccapurple;
+  align-items: center;
+  margin-top: 10%;
+
+  h1 {
+    padding: 30px;
+    color: white;
+    font-size: 50px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .login-btn {
+      border: none;
+      width: 100%;
+      padding: 10px;
+      
+      &:hover {
+        color: white;
+        background: rgb(18, 20, 26);
+      }
+    }
+  }
+}
+
+
+//Cart
+
+
+.cart-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  height: 400px;
+  padding: 10px;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  .cartIcon h3 {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+
+}
+  
+
+  .cartItem {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #2f3c7e;
+  color: #fbeaeb;
+  
+    .cart-actions {
+      color: white;
+      font-size: 20px;
+      width: 50px;
+      border: none;
+      background: rgb(10, 7, 24);
+    }
+  }
+
+}
+
+
+// Header 
+.header-nav {
+  position: sticky;
+  box-shadow: 0px 10px 20px #ccc;
+  margin-bottom: 10px;
+  
+  .header-ul {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    
+    .header-h2 {
+      font-family: monospace;
+      font-size: 30px;
+    }
+
+    .btnLogout{
+      padding:10px;
+      background-color: orangered;
+      border: none;
+
+      
+      &:hover{
+        background-color:rgba(0,6,59);
+      }
+
+    }
+  }
+}
+
+//Layout
+.layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .total-price {
+    text-align: right;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+}
+
+
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+button {
+  margin-top: 25px;
+  margin-bottom: auto;
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(21, 26, 42, 0.787);
+}
+.card {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 10px #ccc;
+
+  img {
+    width: 90%;
+    height: 40%;
+  }
+   > p {
+    padding: 10px;
+    font-size: 30px;
+  }
+  &:hover {
+    box-shadow: 10px 10px 20px #ccc;
+  }
+}
+
+.orderBtn {
+  width: 200px;
+  background: orangered;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(89, 0, 190);
+  }
+}
+
+

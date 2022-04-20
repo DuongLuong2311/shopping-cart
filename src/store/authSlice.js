@@ -6,9 +6,11 @@ const authSlice = createSlice({
   initialState:{ isLoggedIn:false },
   reducers: {
     login(state) {
+      // Đăng nhập thành công
       state.isLoggedIn = true;
     },
     logout(state) {
+      // Đăng xuất thành công
       state.isLoggedIn = false;
     },
   }

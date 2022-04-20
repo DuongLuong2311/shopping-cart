@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { uiActions } from "./uiSlice";
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -7,18 +6,23 @@ const cartSlice = createSlice({
     itemsList: [],
     totalQuantity: 0,
     showCart: false,
-    changed: false
+    changed: false,
+    totalPrice: 0
   },
   reducers: {
+    // Hiện tại dữ liệu giỏ hàng đang rỗng
+    // lấy dữ liệu và update content trong giỏ hàng
     replaceData (state, action) {
       state.totalQuantity = action.payload.totalPrice
       state.itemsList =  action.payload.itemsList
     },
+
+    //Thêm vào giỏ
     addToCart (state, action) {
       state.changed = true
       const newItem = action.payload
 
-      //check if it's avaliable
+      //Kiểm tra nếu sản phẩm trong giỏ hàng tồn tại
       const existingItem = state.itemsList.find(item => item.id === newItem.id);
       if(existingItem) {
         existingItem.quantity++
@@ -35,6 +39,7 @@ const cartSlice = createSlice({
       }
 
     },
+    // Xóa khỏi giỏ
     removeFromCart (state, action) {
       state.changed = true
       const id = action.payload
@@ -48,6 +53,8 @@ const cartSlice = createSlice({
         existingItem.totalPrice -= existingItem.price
       }
     },
+
+    // Hiện giỏ hàng
     setShowCart (state) {
       state.showCart = !state.showCart
     },

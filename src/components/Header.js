@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import Cart from "./Cart";
-import "./Header.css";
 import {authActions} from '../store/authSlice'
 
 
