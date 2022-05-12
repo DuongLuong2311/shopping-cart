@@ -10,7 +10,7 @@ const cartSlice = createSlice({
     totalPrice: 0
   },
   reducers: {
-    // Hiện tại dữ liệu giỏ hàng đang rỗng
+      // Hiện tại dữ liệu giỏ hàng đang rỗng
     // lấy dữ liệu và update content trong giỏ hàng
     replaceData (state, action) {
       state.totalQuantity = action.payload.totalPrice
